@@ -16,8 +16,7 @@ after_script:
 - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
-  api_key:
-    secure: IcP5Ji3coPFHangts0Uf/jPqkxBltalUGNmeTIq3X/RE54GRh42Vam78kFo7gVjiYliXMQsVWhDqJB1pFShRJcEwlNjVsoUiiyxKOfadhvixquqCSd8h47YvMx+AD/w+IZp2cdBgoZZopyjxqkVPRs/BPhg51+WjitQC4A5SoCOGBB5GvvR04ecXS7u3FXAlt0DBbKj7c5OVSdkkEqUb6GDEGMepGECHg2iRtXMKNwz3MroniXRroTJelZfFLT/40+2blf9X8yQFOwRcRwXeYLQTuRwjRqh89G98YI8Bfke9UYrc9tDMFT8SgoyiY8dW2/fv1GB/YdnnLlYA/GD+fOCEl1etbg3eP2nJ7Xl0G1+nWuNxPtfrRYYjIhxoRuKXfzldBDDKCxL3XEpZY3NmCDaM10w15QEW5jXXTZWjN7WL1NoNLaqHcg/WxBcEC3obgsVav23CTG+3fSVmUxhnYEVvxJufu6zYS37BTTNKGJwuiC0xYqsSOuC9yK88wiWfe2XmAJ2f4hIIK5FfHaQQjiI2MUeoQbySYSvzy7gRTQKt6kSIr+8C5liWudZ3uQu7sSSF2GWzBDJBgXlc/DNxpQoBRx89eUUCx96B4QYndjqecc2cMCnG86y6mZCAq46xAzUa0zC8wLBzZuvQyShqNbu9OkqgOe5NMXG5YaGrsTs=
+  api_key: 573227e6-f2ed-4f90-9c85-d5d6408a70f1
   app: projet-lp4b-backend
   run:
     - "bundle install --without development test"
