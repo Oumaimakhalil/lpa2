@@ -16,7 +16,8 @@ after_script:
 - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
-  api_key: 573227e6-f2ed-4f90-9c85-d5d6408a70f1
+  api_key: 
+    secure: 573227e6-f2ed-4f90-9c85-d5d6408a70f1
   app: lpa2backend
   run:
     - "bundle install --without development test"
