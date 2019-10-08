@@ -1,20 +1,34 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.4'
+# Ruby version - 2.3.3 OK
+#ruby '2.3.3' || '2.6.4'
+#ruby '~> 2.3'
+#ruby "2.3.3", :engine => "jruby", :engine_version => "9.1.17.0"
+#ruby '2.3.3', :group => [:development, :test]
+#ruby '2.6.4', :group => [:production]
+
+#if ENV['RAILS_ENV'] == 'production'
+#  ruby "2.3.3", :engine => "jruby", :engine_version => "9.1.17.0"
+#  ruby '2.6.4'
+#else
+#  ruby '2.3.3'
+#end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
-group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~>1.4.1'
-end
-gem 'pg', '~> 1.1', '>= 1.1.4', group: :production
+# Use sqlite3 as the database for Active Record, on ajoute ca pour que ca marche avec heroku
+gem 'sqlite3', '~> 1.3.6' , group: [:test, :development]
+
+# PostgreSQ, on ajoute ca pour que ca marche avec heroku
+gem 'pg', '~> 0.18.4', group: [:production]
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '5.0.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -37,7 +51,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '1.4.1', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,13 +65,15 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '3.15.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper', '1.2.0'
 end
 
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# simplecov
 gem 'simplecov', '~> 0.17.1', require: false, group: :test

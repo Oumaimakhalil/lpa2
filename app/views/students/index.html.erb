@@ -1,4 +1,3 @@
-<% content_for :title, "Students" %>
 <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
@@ -7,8 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>First name</th>
-      <th>Birth date</th>
+      <th>Last name</th>
+      <th>Birthdate</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,8 +16,8 @@
     <% @students.each do |student| %>
       <tr>
         <td><%= student.name %></td>
-        <td><%= student.first_name %></td>
-        <td><%= student.birth_date %></td>
+        <td><%= student.last_name %></td>
+        <td><%= student.birthdate %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

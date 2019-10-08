@@ -40,6 +40,7 @@ class CountersController < ApplicationController
 
   # PATCH/PUT /counters/1
   # PATCH/PUT /counters/1.json
+
   def update
     respond_to do |format|
       @counter.increment!

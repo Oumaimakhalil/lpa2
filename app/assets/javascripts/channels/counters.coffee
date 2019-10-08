@@ -6,6 +6,9 @@ App.counters = App.cable.subscriptions.create "CountersChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    console.log(data);
-    console.log("counter-" + data.id);
-    document.getElementById("counter-" + data.id).innerHTML = data.value;
+    console.log(data)
+    document.getElementById("counter"+data.id).innerHTML = data.value
+    # Called when there's incoming data on the websocket for this channel
+
+  #increment: ->
+    #@perform 'increment'
