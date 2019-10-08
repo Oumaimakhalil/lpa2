@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_083836) do
+ActiveRecord::Schema.define(version: 2019_10_04_092500) do
+
+  create_table "counters", force: :cascade do |t|
+    t.string "name"
+    t.integer "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.string "last_name"
-    t.date "birthdate"
+    t.string "first_name"
+    t.datetime "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

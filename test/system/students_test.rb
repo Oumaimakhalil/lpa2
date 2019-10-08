@@ -14,8 +14,8 @@ class StudentsTest < ApplicationSystemTestCase
     visit students_url
     click_on "New Student"
 
-    fill_in "Birthdate", with: @student.birthdate
-    fill_in "Last name", with: @student.last_name
+    fill_in "Birth date", with: @student.birth_date
+    fill_in "First name", with: @student.first_name
     fill_in "Name", with: @student.name
     click_on "Create Student"
 
@@ -27,8 +27,8 @@ class StudentsTest < ApplicationSystemTestCase
     visit students_url
     click_on "Edit", match: :first
 
-    fill_in "Birthdate", with: @student.birthdate
-    fill_in "Last name", with: @student.last_name
+    fill_in "Birth date", with: @student.birth_date
+    fill_in "First name", with: @student.first_name
     fill_in "Name", with: @student.name
     click_on "Update Student"
 

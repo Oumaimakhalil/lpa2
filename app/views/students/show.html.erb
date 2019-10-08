@@ -1,3 +1,4 @@
+<% content_for :title, "Students:Show" %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,13 +7,13 @@
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @student.last_name %>
+  <strong>First name:</strong>
+  <%= @student.first_name %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
-  <%= @student.birthdate %>
+  <strong>Birth date:</strong>
+  <%= @student.birth_date %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

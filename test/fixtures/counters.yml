@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  first_name: MyString
-  birth_date: 2019-09-27 10:34:21
+  value: 1
 
 two:
   name: MyString
-  first_name: MyString
-  birth_date: 2019-09-27 10:34:21
+  value: 1
